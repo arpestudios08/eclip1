@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="5. POO">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="25"/>
+    <property name="source" value="25"/>
+    <path id="5. POO.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.TestAnimal.classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <path id="run.TestCorredor.classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <path id="run.TestHora.classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <path id="run.TestLibro (1).classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <path id="run.TestLibro.classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <path id="run.TestPunto.classpath">
+        <path refid="5. POO.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="5. POO.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="TestAnimal">
+        <java classname="TestAnimal" failonerror="true" fork="yes">
+            <classpath refid="run.TestAnimal.classpath"/>
+        </java>
+    </target>
+    <target name="TestCorredor">
+        <java classname="Ejer4.TestCorredor" failonerror="true" fork="yes">
+            <classpath refid="run.TestCorredor.classpath"/>
+        </java>
+    </target>
+    <target name="TestHora">
+        <java classname="Ejer3.TestHora" failonerror="true" fork="yes">
+            <classpath refid="run.TestHora.classpath"/>
+        </java>
+    </target>
+    <target name="TestLibro (1)">
+        <java classname="libro.TestLibro" failonerror="true" fork="yes">
+            <classpath refid="run.TestLibro (1).classpath"/>
+        </java>
+    </target>
+    <target name="TestLibro">
+        <java classname="TestLibro" failonerror="true" fork="yes">
+            <classpath refid="run.TestLibro.classpath"/>
+        </java>
+    </target>
+    <target name="TestPunto">
+        <java classname="Ejer1.TestPunto" failonerror="true" fork="yes">
+            <classpath refid="run.TestPunto.classpath"/>
+        </java>
+    </target>
+</project>

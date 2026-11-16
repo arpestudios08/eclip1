@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="2. Bucles">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="25"/>
+    <property name="source" value="25"/>
+    <path id="2. Bucles.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.Bucles_EjemplosClase.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.EjemploForDoWhile.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer12_Factorial.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer13_AdivinarNumero.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer14_Divisores.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer15_NumeroPerfecto.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer1_ContadorCien.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer1_DatosAlumnos.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer2_Suma10NumerosEnteros.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer3_1.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer3_ImparesEntreN1N2.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer6_MinimoMedia.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer7Mejorado_Sumatorio.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer7_Sumatorio.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer8_7Mejorado.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <path id="run.Ejer9_CaracteresAes.classpath">
+        <path refid="2. Bucles.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="2. Bucles.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Bucles_EjemplosClase">
+        <java classname="Bucles_EjemplosClase" failonerror="true" fork="yes">
+            <classpath refid="run.Bucles_EjemplosClase.classpath"/>
+        </java>
+    </target>
+    <target name="EjemploForDoWhile">
+        <java classname="EjemploForDoWhile" failonerror="true" fork="yes">
+            <classpath refid="run.EjemploForDoWhile.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer12_Factorial">
+        <java classname="Ejer12_Factorial" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer12_Factorial.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer13_AdivinarNumero">
+        <java classname="Ejer13_AdivinarNumero" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer13_AdivinarNumero.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer14_Divisores">
+        <java classname="Ejer14_Divisores" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer14_Divisores.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer15_NumeroPerfecto">
+        <java classname="Ejer15_NumeroPerfecto" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer15_NumeroPerfecto.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer1_ContadorCien">
+        <java classname="Ejer1_ContadorCien" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer1_ContadorCien.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer1_DatosAlumnos">
+        <java classname="Ejer1_DatosAlumnos" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer1_DatosAlumnos.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer2_Suma10NumerosEnteros">
+        <java classname="Ejer2_Suma10NumerosEnteros" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer2_Suma10NumerosEnteros.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer3_1">
+        <java classname="Ejer3_1" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer3_1.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer3_ImparesEntreN1N2">
+        <java classname="Ejer3_ImparesEntreN1N2" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer3_ImparesEntreN1N2.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer6_MinimoMedia">
+        <java classname="Ejer6_MinimoMedia" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer6_MinimoMedia.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer7Mejorado_Sumatorio">
+        <java classname="Ejer7Mejorado_Sumatorio" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer7Mejorado_Sumatorio.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer7_Sumatorio">
+        <java classname="Ejer7_Sumatorio" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer7_Sumatorio.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer8_7Mejorado">
+        <java classname="Ejer8_7Mejorado" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer8_7Mejorado.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer9_CaracteresAes">
+        <java classname="Ejer9_CaracteresAes" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer9_CaracteresAes.classpath"/>
+        </java>
+    </target>
+</project>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="1. Condiciones">
+    <property environment="env"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="25"/>
+    <property name="source" value="25"/>
+    <path id="1. Condiciones.classpath">
+        <pathelement location="bin"/>
+    </path>
+    <path id="run.Ejer10B_DiasSemana.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer10_DiasSemanas.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer11_CalcularArea.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer12_DiferenciaHora.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer13_AreaTriangulo.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer16_PreguntasSiNo.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer17_DeporteTemperatura.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer1_Valor_Absoluto.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer2_Pulsaciones.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer3_Hipotenusa.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer4_PorcentajeMujerHombre.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer5_Salario.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer6_PresupuestoHospital.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer8_SumaProducto.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <path id="run.Ejer9_Ecuación.classpath">
+        <path refid="1. Condiciones.classpath"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="1. Condiciones.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="Ejer10B_DiasSemana">
+        <java classname="Ejer10B_DiasSemana" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer10B_DiasSemana.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer10_DiasSemanas">
+        <java classname="Ejer10_DiasSemanas" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer10_DiasSemanas.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer11_CalcularArea">
+        <java classname="Ejer11_CalcularArea" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer11_CalcularArea.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer12_DiferenciaHora">
+        <java classname="Ejer12_DiferenciaHora" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer12_DiferenciaHora.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer13_AreaTriangulo">
+        <java classname="Ejer13_AreaTriangulo" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer13_AreaTriangulo.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer16_PreguntasSiNo">
+        <java classname="Ejer16_PreguntasSiNo" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer16_PreguntasSiNo.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer17_DeporteTemperatura">
+        <java classname="Ejer17_DeporteTemperatura" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer17_DeporteTemperatura.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer1_Valor_Absoluto">
+        <java classname="Ejer1_Valor_Absoluto" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer1_Valor_Absoluto.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer2_Pulsaciones">
+        <java classname="Ejer2_Pulsaciones" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer2_Pulsaciones.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer3_Hipotenusa">
+        <java classname="Ejer3_Hipotenusa" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer3_Hipotenusa.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer4_PorcentajeMujerHombre">
+        <java classname="Ejer4_PorcentajeMujerHombre" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer4_PorcentajeMujerHombre.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer5_Salario">
+        <java classname="Ejer5_Salario" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer5_Salario.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer6_PresupuestoHospital">
+        <java classname="Ejer6_PresupuestoHospital" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer6_PresupuestoHospital.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer8_SumaProducto">
+        <java classname="Ejer8_SumaProducto" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer8_SumaProducto.classpath"/>
+        </java>
+    </target>
+    <target name="Ejer9_Ecuación">
+        <java classname="Ejer9_Ecuación" failonerror="true" fork="yes">
+            <classpath refid="run.Ejer9_Ecuación.classpath"/>
+        </java>
+    </target>
+</project>
