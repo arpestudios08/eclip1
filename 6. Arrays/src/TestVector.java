@@ -31,12 +31,13 @@ public class TestVector {
 		
 		
 		int  numero=4, misNumeros[] = {2,4,5,7};
+		/*
 		System.out.println(Arrays.stream(misNumeros).sum());
 		System.out.println(Arrays.toString(misNumeros));
 		
 		System.out.println(Vectores.getVeces(misNumeros,4));
 		System.out.println(Arrays.toString(Vectores.getVectorRepeticiones(misNumeros,4)));
-		
+		*/
 		
 		
 		
@@ -82,8 +83,9 @@ public class TestVector {
 		*/
 		
 		
-		System.out.println(Arrays.toString(Vectores.imprimeAsterisco()));
+		//System.out.println(Arrays.toString(Vectores.imprimeAsterisco()));
 		
+		System.out.println(Arrays.toString(Vectores.contarRepeticiones(misNumeros)));
 		
 	
 	}

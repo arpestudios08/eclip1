@@ -177,9 +177,23 @@ public class Vectores {
 				resultado+="*";
 			return resultado;
 		}
+		
+		public static int[] contarRepeticiones (int [] numeros)
+		{
+			int[] contadores = new int[10]; // seria hasta 100 pero me canso
+			for(int num=1; num <=10; num++)
+				
+			{
+				contadores [num-1] = getVeces(numeros, num);
+			}
+			
+			return contadores;
+		}
 	
-	
+
 		
 	
+		
+}
 }
 
